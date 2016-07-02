@@ -1,5 +1,16 @@
 package com.ahmeddinar.justbustracker.utils;
 
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.support.v4.content.res.ResourcesCompat;
+
+import com.ahmeddinar.justbustracker.R;
+import com.google.android.gms.ads.formats.NativeAd;
+import com.google.android.gms.drive.Contents;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.HashMap;
@@ -25,5 +36,6 @@ public class MyMapUtils {
 
         return Stoppage;
     }
+
 
 }

@@ -14,6 +14,7 @@ import retrofit.Call;
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
+import rx.Observable;
 
 /**
  * Created by Ahmed Dinar on 6/29/2016.
@@ -27,11 +28,11 @@ public class JustSaveSomething {
         ApiService service = client.getApiService();
 
 
-        Call<List<BusLocation>> call = service.get();
+        Observable<List<BusLocation>> call = service.get();
 
 
         // Asynchronously execute HTTP request
-        call.enqueue(new Callback<List<BusLocation>>() {
+      /*  call.enqueue(new Callback<List<BusLocation>>() {
 
 
             @Override
@@ -72,7 +73,7 @@ public class JustSaveSomething {
                 textView.setText("onFailure " + t.getMessage());
             }
 
-        });
+        });*/
     }
 
 }

@@ -4,7 +4,8 @@ import com.ahmeddinar.justbustracker.rest.model.BusLocation;
 
 import java.util.List;
 
-import retrofit.Call;
+import rx.Observable;
+
 
 import retrofit.http.GET;
 
@@ -14,6 +15,6 @@ import retrofit.http.GET;
 public interface ApiService {
 
     @GET("coordinate/all")
-    Call<List<BusLocation>> get();
+    Observable<List<BusLocation>> get();
 
 }

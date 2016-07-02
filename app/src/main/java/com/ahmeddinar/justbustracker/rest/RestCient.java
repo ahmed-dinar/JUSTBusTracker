@@ -9,6 +9,7 @@ import java.io.IOException;
 
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
+import retrofit.RxJavaCallAdapterFactory;
 
 /**
  * Created by Ahmed Dinar on 6/29/2016.
@@ -44,6 +45,7 @@ public class RestCient {
 
         // Retrofit setup
         Retrofit retrofit = new Retrofit.Builder()
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .baseUrl(API_BASE_URL)
                 .client(httpClient)
                 .addConverterFactory(gson)
